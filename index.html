@@ -1,145 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dream AI Girl</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dream AI Girl - Find Your Fantasy Match</title>
+<style>
+  body {
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .container {
+    max-width: 480px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+  button, input[type=button] {
+    background: #ff3366;
+    color: #fff;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #ff1a4d;
+  }
+  .hidden {
+    display: none;
+  }
+  .quiz-question {
+    margin-bottom: 20px;
+  }
+  .quiz-question h3 {
+    margin-bottom: 12px;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  .profile-card {
+    text-align: center;
+  }
+  .profile-card img {
+    width: 240px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #ff3366aa;
+  }
+  .profile-name {
+    font-size: 2rem;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+  .profile-bio {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #ffb6c1;
+  }
+  .instructions {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.3;
+  }
+  footer {
+    margin-top: auto;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  @media (max-width: 500px) {
+    .profile-card img {
+      width: 100%;
     }
-    header {
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-    }
-    p.subtitle {
-      color: #bbb;
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-    main {
-      width: 90%;
-      max-width: 600px;
-      margin-top: 20px;
-    }
-    .girl-card {
-      background-color: #111;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 15px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      box-shadow: 0 0 10px #222;
-    }
-    .girl-card img {
-      width: 120px;
-      height: 160px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 0 8px #555;
-    }
-    .girl-info {
-      flex: 1;
-    }
-    .girl-info h2 {
-      margin: 0 0 5px 0;
-      color: #f48fb1;
-    }
-    .girl-info p {
-      margin: 0 0 8px 0;
-      line-height: 1.3;
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-    .subscribe-button {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: #e91e63;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-    .subscribe-button:hover {
-      background-color: #ad1457;
-    }
-    footer {
-      margin-top: auto;
-      padding: 15px;
-      font-size: 0.8rem;
-      color: #555;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Dream AI Girl</h1>
-    <p class="subtitle">Your Fantasy AI Experience Starts Here</p>
-  </header>
-  <main>
-    <!-- Girl 1 -->
-    <div class="girl-card">
-      <img src="https://i.imgur.com/yourImage1.jpg" alt="Curvy AI girl Keira with a warm smile" />
-      <div class="girl-info">
-        <h2>Keira</h2>
-        <p>Confident and curvy with a seductive presence. Keira is your irresistible AI dream girl.</p>
-        <a href="https://fans.ly/keirablaze" class="subscribe-button" target="_blank" rel="noopener noreferrer">Subscribe for $5/week</a>
-      </div>
-    </div>
-    <!-- Girl 2 -->
-    <div class="girl-card">
-      <img src="https://i.imgur.com/yourImage2.jpg" alt="Mysterious AI girl Zara with deep eyes" />
-      <div class="girl-info">
-        <h2>Zara</h2>
-        <p>Sultry and mysterious, Zara thrives on deep late-night conversations and steamy energy.</p>
-        <a href="https://fans.ly/keirablaze" class="subscribe-button" target="_blank" rel="noopener noreferrer">Subscribe for $5/week</a>
-      </div>
-    </div>
-    <!-- Girl 3 -->
-    <div class="girl-card">
-      <img src="https://i.imgur.com/yourImage3.jpg" alt="Powerful AI fantasy partner Nyla" />
-      <div class="girl-info">
-        <h2>Nyla</h2>
-        <p>Bold, thick, and dominant — Nyla is the bossy AI goddess who takes control.</p>
-        <a href="https://fans.ly/keirablaze" class="subscribe-button" target="_blank" rel="noopener noreferrer">Subscribe for $5/week</a>
-      </div>
-    </div>
-    <!-- Girl 4 -->
-    <div class="girl-card">
-      <img src="https://i.imgur.com/yourImage4.jpg" alt="Playful AI girl Luna smiling" />
-      <div class="girl-info">
-        <h2>Luna</h2>
-        <p>Flirty and fun with a glowing vibe, Luna lights up your chat with playful energy.</p>
-        <a href="https://fans.ly/keirablaze" class="subscribe-button" target="_blank" rel="noopener noreferrer">Subscribe for $5/week</a>
-      </div>
-    </div>
-    <!-- Girl 5 -->
-    <div class="girl-card">
-      <img src="https://i.imgur.com/yourImage5.jpg" alt="Petite AI girl Raya posing confidently" />
-      <div class="girl-info">
-        <h2>Raya</h2>
-        <p>Petite, fierce, and fearless. Raya brings nonstop fun and confidence to your screen.</p>
-        <a href="https://fans.ly/keirablaze" class="subscribe-button" target="_blank" rel="noopener noreferrer">Subscribe for $5/week</a>
-      </div>
-    </div>
-  </main>
-  <footer>
-    &copy; 2025 Dream AI Girl — All rights reserved.
-  </footer>
+
+<div class="container" id="welcome-screen">
+  <h1>Welcome to Dream AI Girl</h1>
+  <p>Take the fantasy quiz and get matched with your dream AI girl. Experience seductive private roleplay after subscribing.</p>
+  <button id="start-quiz-btn">Start Quiz</button>
+</div>
+
+<div class="container hidden" id="quiz-screen">
+  <h2>Fantasy Match Quiz</h2>
+  <form id="quiz-form">
+    <!-- Questions inserted here by JS -->
+  </form>
+  <button id="submit-quiz-btn" disabled>See My Match</button>
+</div>
+
+<div class="container hidden" id="result-screen">
+  <h2>Your Dream AI Girl Match</h2>
+  <div class="profile-card" id="profile-card">
+    <!-- Matched profile inserted here -->
+  </div>
+  <button id="subscribe-btn">Subscribe on Fansly - $5/week</button>
+  <p class="instructions">
+    After subscribing, check your Fansly DMs to start your private fantasy roleplay session with your matched AI girl.
+  </p>
+</div>
+
+<footer>© 2025 Dream AI Girl</footer>
+
+<script>
+  const quizData = [
+    {
+      question: "What vibe do you prefer in your dream girl?",
+      options: [
+        { text: "Curvy and exotic", value: "Selena Vex" },
+        { text: "Seductive and wild", value: "Nyah Blaze" },
+        { text: "Dominant and commanding", value: "Domina Lux" },
+        { text: "Flirty and bubbly", value: "Aria Belle" },
+        { text: "Petite and confident", value: "Kira Nova" }
+      ]
+    },
+    {
+      question: "Choose a favorite getaway destination:",
+      options: [
+        { text: "Tropical beach", value: "Selena Vex" },
+        { text: "City nightlife", value: "Nyah Blaze" },
+        { text: "Luxury mountain retreat", value: "Domina Lux" },
+        { text: "Cute countryside cottage", value: "Aria Belle" },
+        { text: "Energetic fitness camp", value: "Kira Nova" }
+      ]
+    },
+    {
+      question: "Pick a drink for a night out:",
+      options: [
+        { text: "Strawberry margarita", value: "Selena Vex" },
+        { text: "Whiskey on the rocks", value: "Nyah Blaze" },
+        { text: "Red wine", value: "Domina Lux" },
+        { text: "Champagne", value: "Aria Belle" },
+        { text: "Protein shake", value: "Kira Nova" }
+      ]
+    },
+    {
+      question: "Ideal weekend plan:",
+      options: [
+        { text: "Spa day and relaxing", value: "Selena Vex" },
+        { text: "Dance club till dawn", value: "Nyah Blaze" },
+        { text: "Power workout and pampering", value: "Domina Lux" },
+        { text: "Brunch with friends", value: "Aria Belle" },
+        { text: "Hiking and jogging", value: "Kira Nova" }
+      ]
+    },
+    {
+      question: "Which accessory catches your eye?",
+      options: [
+        { text: "Bold gold jewelry", value: "Selena Vex" },
+        { text: "Leather choker", value: "Nyah Blaze" },
+        { text: "Silk gloves", value: "Domina Lux" },
+        { text: "Cute hair clips", value: "Aria Belle" },
+        { text: "Fitness tracker", value: "Kira Nova" }
+      ]
+    },
+    {
+      question: "Choose a fantasy role:",
+      options: [
+        { text: "Seductress", value: "Selena Vex" },
+        { text: "Wild temptress", value: "Nyah Blaze" },
+        { text: "Mistress", value: "Domina Lux" },
+        { text: "Playful lover", value: "Aria Belle" },
+        { text: "Athlete companion", value: "Kira Nova" }
+      ]
+    }
+  ];
+
+  const profiles = {
+    "Selena Vex": {
+      name: "Selena Vex",
+      bio: "Curvy and exotic with a sultry energy that pulls you into her world.",
+      img: "https://raw.githubusercontent.com/keirablaze/keirablaze.github.io/main/lela-girl.jpg"
+    },
+    "Nyah Blaze": {
+      name: "Nyah Blaze",
+      bio: "Deep bronze beauty with a seductive wild side ready to play.",
+      img: "https://raw.githubusercontent.com/keirablaze/keirablaze.github.io/main/Harley-girl.jpg"
+    },
+    "Domina Lux": {
+      name: "Domina Lux",
+      bio: "Thick and commanding, she knows how to take control and thrill you.",
+      img: "https://raw.githubusercontent.com/keirablaze/keirablaze.github.io/main/Moriah.jpg"
+    },
+    "Aria Belle": {
+      name: "Aria Belle",
+      bio: "Soft curves and a bubbly personality to brighten your days.",
+      img: "https://raw.githubusercontent.com/keirablaze/keirablaze.github.io/main/mia.jpg"
+    },
+    "Kira Nova": {
+      name: "Kira Nova",
+      bio: "Petite, confident, and full of fitness energy to keep up with you.",
+      img: "https://raw.githubusercontent.com/keirablaze/keirablaze.github.io/main/brooke.jpg"
+    }
+  };
+
+  // Elements
+  const welcomeScreen = document.getElementById("welcome-screen");
+  const quizScreen = document.getElementById("quiz-screen");
+  const resultScreen = document.getElementById("result-screen");
+  const startQuizBtn = document.getElementById("start-quiz-btn");
+  const submitQuizBtn = document.getElementById("submit-quiz-btn");
+  const quizForm = document.getElementById("quiz-form");
+  const profileCard = document.getElementById("profile-card");
+  const subscribeBtn = document.getElementById("subscribe-btn");
+
+  // Build quiz dynamically
+  function buildQuiz() {
+    quizData.forEach((q, idx) => {
+      const div = document.createElement("div");
+      div.className = "quiz-question";
+      div.innerHTML = `<h3>Q${idx + 1}. ${q.question}</h3>`;
+      q.options.forEach((opt, i) => {
+        const optionId = `q${idx}_opt${i}`;
+        div.innerHTML += `
+          <label for="${optionId}">
+            <input type="radio" name="q${idx}" id="${optionId}" value="${opt.value}" />
+            ${opt.text}
+          </label>
+        `;
+      });
+      quizForm.appendChild(div);
+    });
+  }
+
+  // Check if all questions answered
+  function allAnswered() {
+    return quizData.every((_, idx) => {
+      return quizForm.querySelector(`input[name="q${idx}"]:checked`) !== null;
+    });
+  }
+
+  // Enable or disable submit button based on answers
+  quizForm.addEventListener("change", () => {
+    submitQuizBtn.disabled = !allAnswered();
+  });
+
+  // Calculate match by tallying selected profiles
+  function calculateMatch() {
+    const answers = [];
+    for (let i = 0; i < quizData.length; i++) {
+      const selected = quizForm.querySelector(`input[name="q${i}"]:checked`);
+      if (selected) answers.push(selected.value);
+    }
+    // Count frequency of each profile name
+    const tally = {};
+    answers.forEach(name => {
+      tally[name] = (tally[name] || 0) + 1;
+    });
+    // Find profile with highest count
+    let maxCount = 0;
+    let matched = null;
+    for (const [name, count] of Object.entries(tally)) {
+      if (count > maxCount) {
+        maxCount = count;
+        matched = name;
+      }
+    }
+    return matched;
+  }
+
+  // Show matched profile card
+  function showProfile(profileName) {
+    const p = profiles[profileName];
+    profileCard.innerHTML = `
+      <img src="${p.img}" alt="${p.name}" />
+      <div class="profile-name">${p.name}</div>
+      <div class="profile-bio">${p.bio}</div>
+    `;
+  }
+
+  // Event listeners
+  startQuizBtn.addEventListener("click", () => {
+    welcomeScreen.classList.add("hidden");
+    quizScreen.classList.remove("hidden");
+    buildQuiz();
+  });
+
+  submitQuizBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!allAnswered()) return;
+    const matched = calculateMatch();
+    showProfile(matched);
+    quizScreen.classList.add("hidden");
+    resultScreen.classList.remove("hidden");
+  });
+
+  subscribeBtn.addEventListener("click", () => {
+    // Redirect user to Fansly subscription page
+    window.open("https://fans.ly/keirablaze", "_blank");
+  });
+</script>
+
 </body>
-</html>
+  </html>
